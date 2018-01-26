@@ -34,8 +34,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomButton: UIButton!      // Has TAG = 2
     @IBOutlet weak var storyTextView: UILabel!
     
-    // TODO Step 5: Initialise instance variables here
     
+    // TODO Step 5: Initialise instance variables here
+    var storyIndex : Int = 1
     
     
     
@@ -44,6 +45,7 @@ class ViewController: UIViewController {
         
         
         // TODO Step 3: Set the text for the storyTextView, topButton, bottomButton, and to T1_Story, T1_Ans1, and T1_Ans2
+        bottomButton.setTitle(answer1b, for: .normal)
         
     }
 
@@ -52,13 +54,25 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
     
         // TODO Step 4: Write an IF-Statement to update the views
-                
+        if sender.tag == 1 && storyIndex > 1{
+            
+        }
+        if sender.tag == 2 || storyIndex < 1 {
+            
+        }
+        // When the user gets to the stories without answers, you can hide the buttons using the syntax:  buttonName.isHidden = true
+        
         // TODO Step 6: Modify the IF-Statement to complete the story
         
     
     }
     
-
+    
+    func setTitle(_ title: String?,
+                    for state: UIControlState){
+        
+    }
+    
 
 
 }
